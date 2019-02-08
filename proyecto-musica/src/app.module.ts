@@ -15,6 +15,9 @@ import {GeneroModule} from "./genero/genero.module";
 import {RolModule} from "./rol/rol.module";
 import {RolPorUsuarioModule} from "./rol-por-usuario/rol-por-usuario.module";
 import {UsuarioModule} from "./usuario/usuario.module";
+import {DescargasEntity} from "./descargas/descargas.entity";
+import {CancionModule} from "./cancion/cancion.module";
+import {DescargasModule} from "./descargas/descargas.module";
 
 @Module({
     imports: [
@@ -29,11 +32,13 @@ import {UsuarioModule} from "./usuario/usuario.module";
             synchronize: true,
             dropSchema: false, //borra la base y se vuelve a crear, buena idea para pruebas pero no para produccion
             entities:[
-                AlbumEntity,AutorEntity,CancionEntity,GeneroEntity,RolEntity,RolPorUsuarioEntity,UsuarioEntity
+                AlbumEntity,AutorEntity,CancionEntity,DescargasEntity,GeneroEntity,RolEntity,RolPorUsuarioEntity,UsuarioEntity
             ],
         }),
         AlbumModule,
         AutorModule,
+        CancionModule,
+        DescargasModule,
         GeneroModule,
         RolModule,
         RolPorUsuarioModule,
