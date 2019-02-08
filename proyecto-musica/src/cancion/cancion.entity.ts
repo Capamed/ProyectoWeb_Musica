@@ -1,13 +1,15 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany } from "typeorm";
 import { GeneroEntity } from "src/genero/genero.entity";
 import { AutorEntity } from "src/autor/autor.entity";
 import { AlbumEntity } from "src/album/album.entity";
+import { type } from "os";
+import { DescargasEntity } from "src/descargas/descargas.entity";
 
 @Entity('cancion')
 
 export class CancionEntity {
     @PrimaryGeneratedColumn()
-    idDisco: number;
+    idCancion: number;
 
     @Column({
         name:"nombreCancion",
@@ -71,6 +73,11 @@ export class CancionEntity {
 
     genero:GeneroEntity
 
+    @OneToMany(
+        type => DescargasEntity,
+        descarga => descarga.cancion
+    )
+    descargas: DescargasEntity[];
 
 
 

@@ -13,6 +13,6 @@ import { CancionService } from "./cancion.service";
     }
 )
 
-export class DiscoModule {
+export class CancionModule {
     
 }
