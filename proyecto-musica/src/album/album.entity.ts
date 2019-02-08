@@ -21,7 +21,6 @@ export class AlbumEntity {
         cancion=> cancion.album
 
     )
-
     canciones: CancionEntity[];
 
 }
