@@ -1,4 +1,5 @@
 import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from "typeorm";
+import { RolPorUsuarioEntity } from "src/rol-por-usuario/rol-por-usuario.entity";
 
 @Entity('usuario')
 
@@ -46,4 +47,10 @@ export class UsuarioEntity {
     type:"varchar",
     })
     fotoUsuario: string;
+
+    @OneToMany(
+        type => RolPorUsuarioEntity,
+        rolPorUsuario => rolPorUsuario.usuario
+    )
+        rolesPorUsuario:  RolPorUsuarioEntity[];
 }
