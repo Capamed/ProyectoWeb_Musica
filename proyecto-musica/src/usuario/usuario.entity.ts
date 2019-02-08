@@ -6,7 +6,7 @@ import { DescargasEntity } from "src/descargas/descargas.entity";
 
 export class UsuarioEntity {
     @PrimaryGeneratedColumn()
-    idUsuario: number;
+    idUsuario?: number;
 
     @Column({
         name:"username",

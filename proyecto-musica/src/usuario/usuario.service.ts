@@ -5,6 +5,7 @@ import {InjectRepository} from "@nestjs/typeorm"
 import {Usuario} from "./usuario.controller";
 
 @Injectable()
+
 export class UsuarioService {
     constructor(
         @InjectRepository(UsuarioEntity)
@@ -26,7 +27,7 @@ export class UsuarioService {
 
     borrar(id: number): Promise<UsuarioEntity> {
         const usuarioEntityEliminar = this._usuarioRepository.create({
-            id: id
+            idUsuario: id
         });
         return this._usuarioRepository.remove(usuarioEntityEliminar)
     }

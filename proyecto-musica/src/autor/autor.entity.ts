@@ -6,7 +6,7 @@ import { CancionEntity } from "src/cancion/cancion.entity";
 
 export class AutorEntity {
     @PrimaryGeneratedColumn()
-    idAutor: number;
+    idAutor?: number;
 
     @Column({
         name:"nombreAutor",

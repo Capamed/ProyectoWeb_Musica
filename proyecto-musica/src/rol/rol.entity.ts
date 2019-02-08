@@ -6,7 +6,7 @@ import {RolPorUsuarioEntity} from "../rol-por-usuario/rol-por-usuario.entity";
 export class RolEntity {
 
     @PrimaryGeneratedColumn()
-    id: number;
+    id?: number;
 
     @Column({
         name: 'nombre_rol',

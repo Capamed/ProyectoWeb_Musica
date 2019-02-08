@@ -9,7 +9,7 @@ import { DescargasEntity } from "src/descargas/descargas.entity";
 
 export class CancionEntity {
     @PrimaryGeneratedColumn()
-    idCancion: number;
+    idCancion?: number;
 
     @Column({
         name:"nombreCancion",

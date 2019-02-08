@@ -27,16 +27,18 @@ export class AppController {
         @Query('error') error: string
     ) {
         let mensaje = undefined;
+        let clase = undefined;
 
         if(error){
             mensaje = error;
+            clase = 'alert alert-danger'
         }
 
         let mensajeVerificacion=undefined;
         if(mensajeObtenido){
             mensajeVerificacion=mensajeObtenido;
         }
-        res.render('login', {mensajeVerificacion: mensajeVerificacion, mensaje:mensaje})
+        res.render('login', {mensajeVerificacion: mensajeVerificacion, mensaje:mensaje, clase:clase})
     }
 
     @Post('login')
@@ -61,8 +63,8 @@ export class AppController {
 
         errores.forEach((error)=>{
             listaErrores.push(error.constraints["matches"])
-
             listaErrores.push(error.constraints["isNotEmpty"])
+
         })
         const hayErrores = errores.length > 0;
 

@@ -18,7 +18,6 @@ export class RolPorUsuarioService {
         const consulta: FindOneOptions<RolPorUsuarioEntity> = {
             where: {
                 usuario: idUsuario,
-
             },
             relations:['rol','usuario']
         };

@@ -81,7 +81,9 @@ export class RolPorUsuarioController {
                 await this._rolPorUsuarioService.crear(rolPorUsuario)
             //const parametrosConsulta = `?accion=crear&nombre=${rolPorUsuario.rol}`;
             response.redirect('/rol-por-usuario/asignar-rol/'+idUsuario)
-        }}}
+        }
+    }
+}
 
 
 
