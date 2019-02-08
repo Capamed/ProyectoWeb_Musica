@@ -13,6 +13,13 @@ export class AppController {
 
     }
 
+    @Get('home')
+    mostrarHome(
+        @Res() res
+    ){
+        res.render('home')
+    }
+
     @Get('login')
     mostrarLogin(
         @Res() res,
