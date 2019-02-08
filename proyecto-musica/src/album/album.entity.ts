@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
+import { CancionEntity } from "src/cancion/cancion.entity";
 
 @Entity('album')
 
@@ -13,4 +14,14 @@ export class AlbumEntity {
         length:40
     })
     nombreAlbum: string;
+
+
+    @OneToMany(
+        type => CancionEntity,
+        cancion=> cancion.album
+
+    )
+
+    canciones: CancionEntity[];
+
 }

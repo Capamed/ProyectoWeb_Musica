@@ -8,7 +8,7 @@ import { CancionEntity } from "./cancion.entity";
 export class CancionService {
     constructor(
         @InjectRepository(CancionEntity)
-        private readonly _discoRepository:Repository<CancionEntity>
+        private readonly _cancionRepository:Repository<CancionEntity>
     ){
     }
 }

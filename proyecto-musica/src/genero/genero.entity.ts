@@ -1,4 +1,5 @@
 import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from "typeorm";
+import { CancionEntity } from "src/cancion/cancion.entity";
 
 @Entity('genero')
 
@@ -14,5 +15,11 @@ export class GeneroEntity {
     })
     nombreGenero: string;
 
+    @OneToMany(
+        type => CancionEntity,
+        cancion=>cancion.genero
+    )
+
+    canciones: CancionEntity[];
 
 }
