@@ -1,4 +1,7 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
+import { GeneroEntity } from "src/genero/genero.entity";
+import { AutorEntity } from "src/autor/autor.entity";
+import { AlbumEntity } from "src/album/album.entity";
 
 @Entity('cancion')
 
@@ -49,15 +52,21 @@ export class CancionEntity {
 
     @ManyToOne(
         type =>AutorEntity,
-        autor => autor.discos
+        autor => autor.canciones
     )
     autor:AutorEntity
 
 
-
     @ManyToOne(
-        type =>GeneroEntity ,
-        genero => genero.discos
+        type =>AlbumEntity,
+        album => album.canciones
+    )
+    album:AlbumEntity
+
+    
+    @ManyToOne(
+        type =>GeneroEntity,
+        genero => genero.canciones
     )
 
     genero:GeneroEntity
