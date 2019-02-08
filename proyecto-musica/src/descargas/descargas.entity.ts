@@ -14,7 +14,7 @@ export class DescargasEntity{
         name: "fecha_descarga",
         type: "date"
     })
-    fecha_descarga: Date
+    fecha_descarga: Date;
 
     @ManyToOne(
         type => UsuarioEntity,

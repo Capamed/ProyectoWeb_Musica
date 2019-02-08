@@ -7,3 +7,9 @@ export class DescargasController{
     constructor(private readonly _descargasService:DescargasService,
         ){}
 }
+
+export interface Descargas {
+
+    idDescargas?:number;
+    fecha_descarga: String;
+}

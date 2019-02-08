@@ -7,3 +7,9 @@ export class GeneroController{
     constructor(private readonly _generoService:GeneroService){}
 
 }
+export interface Genero {
+
+    idGenero: number;
+    nombreGenero: string;
+
+}

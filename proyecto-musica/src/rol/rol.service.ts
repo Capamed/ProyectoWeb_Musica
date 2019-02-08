@@ -12,4 +12,9 @@ export class RolService {
     ){
 
     }
+
+    obtenerRol(): Promise<RolEntity[]> {
+        return this._rolRepository.find()
+    }
+
 }

@@ -7,3 +7,9 @@ export class AlbumController {
     constructor(private readonly _albumService:AlbumService){}
     
 }
+
+export interface Album {
+
+    idAlbum: number;
+    nombreAlbum: string;
+}

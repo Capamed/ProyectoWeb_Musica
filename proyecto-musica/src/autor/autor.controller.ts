@@ -8,3 +8,10 @@ export class AutorController {
 
 
 }
+
+export interface Autor {
+
+    idAutor: number;
+    nombreAutor: string;
+    apellidoAutor: string;
+}

@@ -11,3 +11,13 @@ export class UsuarioController{
 
         
 }
+
+export interface Usuario{
+    idUsuario?:number;
+    username: string;
+    password: string;
+    nombre:string;
+    apellido:string;
+    correo: string;
+    fotoUsuario: string;
+}

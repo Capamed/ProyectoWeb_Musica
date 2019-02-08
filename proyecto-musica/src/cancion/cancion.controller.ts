@@ -6,5 +6,16 @@ import { CancionService } from "./cancion.service";
 
 export class CancionController {
     constructor(private readonly _cancionService:CancionService,
-        ){}
-    }
+    ){}
+}
+
+export interface Cancion {
+
+    idCancion: number;
+    nombreCancion: string;
+    anoCancion: number;
+    descripcionCancion: string;
+    idiomaCancion: string;
+    linkCancion: string;
+    fotoCancion: string;
+}
